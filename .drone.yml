@@ -20,7 +20,7 @@ steps:
     settings:
       api_key:
         from_secret: token
-      files: *
+      files: /*
   - name: slack
     image: plugins/slack
     settings:
