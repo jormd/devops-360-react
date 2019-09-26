@@ -21,7 +21,8 @@ steps:
       api_key:
         from_secret: token
       files: /*
-    when: event: [tag]
+    when:
+      event: tag
   - name: slack
     image: plugins/slack
     settings:
