@@ -15,10 +15,15 @@ steps:
     image: node:alpine
     commands:
       - npm test
+  - name: release
+    image: plugins/github-release
+    settings:
+      api_key:
+        from_secret: token
+      files: *
   - name: slack
     image: plugins/slack
     settings:
       webhook:
-        from_secret: https://hooks.slack.com/services/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
-        channel: drone-johann
-        username: drone-ci
+        from_secret: webhook
+      channel: drone-johann
