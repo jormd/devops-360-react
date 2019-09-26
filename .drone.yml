@@ -20,4 +20,5 @@ steps:
     settings:
       webhook:
         from_secret: https://hooks.slack.com/services/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
-      channel: drone-johann
+        channel: drone-johann
+        username: drone-ci
