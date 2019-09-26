@@ -20,7 +20,7 @@ steps:
     settings:
       api_key:
         from_secret: token
-      files: /*
+      files: ./release.tar.gz
     when:
       event: tag
   - name: slack
